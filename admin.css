@@ -1,0 +1,29 @@
+.admin-body { padding-top: 96px; }
+.admin-main { max-width: 1200px; margin: 0 auto; padding: 30px 5% 60px; }
+.admin-main h1 { font-size: clamp(30px, 4vw, 46px); margin-bottom: 24px; }
+.admin-denied { text-align: center; padding: 80px 20px; font-size: 18px; }
+.admin-denied a { text-decoration: underline; font-weight: 600; }
+
+.admin-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+.admin-tabs button { background: var(--paper); border: 1px solid var(--line); padding: 11px 20px; font-size: 14px; }
+.admin-tabs button.aktif { background: var(--ink); color: #fff; border-color: var(--ink); }
+.admin-tabs b { background: var(--lime); color: var(--ink); border-radius: 999px; padding: 1px 9px; font-size: 12px; margin-left: 6px; }
+
+.table-wrap { background: var(--paper); border: 1px solid var(--line); border-radius: var(--r); overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th { text-align: left; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding: 16px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+td { padding: 14px 16px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+tr:last-child td { border-bottom: none; }
+td img { width: 56px; height: 56px; object-fit: cover; border-radius: 12px; background: var(--sage); display: block; }
+td .emoji { width: 56px; height: 56px; border-radius: 12px; background: var(--sage); display: grid; place-items: center; font-size: 28px; }
+td small { color: var(--muted); display: block; }
+.aksi { display: flex; gap: 6px; flex-wrap: wrap; }
+.aksi button { padding: 7px 14px; font-size: 12.5px; background: var(--cream); }
+.aksi .ok { background: var(--lime); }
+.aksi .bahaya { background: #ffe0e0; color: #b3261e; }
+.aksi button:hover { transform: none; filter: brightness(.95); }
+.status { font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 999px; white-space: nowrap; }
+.status.pending { background: var(--butter); }
+.status.approved { background: var(--lime); }
+.status.rejected { background: #ffe0e0; color: #b3261e; }
+.kosong { padding: 50px; text-align: center; color: var(--muted); }

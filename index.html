@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preloved Mini</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <a href="#home" class="logo">
+        <img src="images/logo.png" alt="Logo Preloved Mini" class="logo-img" />
+        <span>Preloved Mini ♡</span>
+      </a>
+
+      <button id="hamburger-menu" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#kategori">Kategori</a>
+        <a href="#katalog">Katalog</a>
+        <a href="#jual" class="nav-jual">+ Jual Barang</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#" id="authLink" class="nav-auth">Masuk</a>
+        <div class="user-menu" id="userMenu" hidden>
+          <button type="button" class="user-chip" id="userChip" aria-haspopup="true">
+            <span class="avatar" id="userAvatar">U</span><span id="userName">User</span>
+          </button>
+          <div class="user-dropdown">
+            <div class="ud-head"><b id="udNama"></b><small id="udEmail"></small></div>
+            <a href="admin.html" id="adminLink" hidden>⚙ Panel Admin</a>
+            <a href="#" id="logoutLink">Keluar</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- HOME -->
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <div class="eyebrow"><i></i> PRELOVED · REUSE · DISCOVER</div>
+        <h1>Barang lama,<br /><em>cerita baru.</em></h1>
+        <p>
+          Temukan barang preloved yang masih layak digunakan atau jual barangmu
+          agar mendapatkan pemilik baru.
+        </p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#katalog">Lihat Katalog →</a>
+          <a class="btn btn-secondary" href="#jual">Jual Barangku</a>
+        </div>
+        <ul class="hero-chips">
+          <li>♻️ Lebih hemat</li>
+          <li>✓ Dicek admin</li>
+          <li>💬 Beli via WhatsApp</li>
+        </ul>
+      </div>
+
+      <div class="hero-art">
+        <div class="hero-images">
+          <div class="hero-tile"><img src="images/Tas.png" alt="Tas" onerror="this.replaceWith(document.createTextNode('👜'))" /></div>
+          <div class="hero-tile"><img src="images/sepatu.png" alt="Sepatu" onerror="this.replaceWith(document.createTextNode('👟'))" /></div>
+          <div class="hero-tile"><img src="images/Buku.png" alt="Buku" onerror="this.replaceWith(document.createTextNode('📚'))" /></div>
+          <div class="hero-tile"><img src="images/Headphone.png" alt="Headphone" onerror="this.replaceWith(document.createTextNode('🎧'))" /></div>
+        </div>
+        <div class="hero-badge">Reuse more,<br />waste less ♡</div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>PRELOVED ✦ REUSE ✦ DISCOVER ✦ PRELOVED ✦ REUSE ✦ DISCOVER ✦ PRELOVED ✦ REUSE ✦ DISCOVER ✦ </span>
+        <span>PRELOVED ✦ REUSE ✦ DISCOVER ✦ PRELOVED ✦ REUSE ✦ DISCOVER ✦ PRELOVED ✦ REUSE ✦ DISCOVER ✦ </span>
+      </div>
+    </div>
+
+    <!-- KATEGORI -->
+    <section id="kategori">
+      <div class="section-heading">
+        <div class="eyebrow">JELAJAHI</div>
+        <h2>Kategori Preloved</h2>
+      </div>
+
+      <div class="category-grid">
+        <div class="category-card" data-kategori="Fashion">
+          <img src="images/Kategori/Fashion.png" alt="" onerror="this.replaceWith(document.createTextNode('👕'))" />
+          <h3>Fashion</h3>
+        </div>
+        <div class="category-card" data-kategori="Tas & Aksesoris">
+          <img src="images/Kategori/Tas.png" alt="" onerror="this.replaceWith(document.createTextNode('👜'))" />
+          <h3>Tas &amp; Aksesoris</h3>
+        </div>
+        <div class="category-card" data-kategori="Sepatu/Sandal">
+          <img src="images/Kategori/sepatu.png" alt="" onerror="this.replaceWith(document.createTextNode('👟'))" />
+          <h3>Sepatu/Sandal</h3>
+        </div>
+        <div class="category-card" data-kategori="Buku">
+          <img src="images/Kategori/Buku.png" alt="" onerror="this.replaceWith(document.createTextNode('📚'))" />
+          <h3>Buku</h3>
+        </div>
+        <div class="category-card" data-kategori="Elektronik">
+          <img src="images/Kategori/Elektronik.png" alt="" onerror="this.replaceWith(document.createTextNode('🎧'))" />
+          <h3>Elektronik</h3>
+        </div>
+        <div class="category-card" data-kategori="Perabotan">
+          <img src="images/Kategori/Perabotan.png" alt="" onerror="this.replaceWith(document.createTextNode('🪑'))" />
+          <h3>Perabotan</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- KATALOG -->
+    <section class="catalog-section" id="katalog">
+      <div class="section-heading">
+        <div class="eyebrow">TEMUKAN BARANG</div>
+        <h2>Katalog Preloved</h2>
+        <p>Pilih barang yang sesuai dengan kebutuhanmu!</p>
+      </div>
+
+      <div class="catalog-tools">
+        <input type="search" id="searchInput" placeholder="Cari barang..." />
+
+        <select id="filterKategori">
+          <option value="">Semua Kategori</option>
+          <option>Fashion</option>
+          <option>Tas & Aksesoris</option>
+          <option>Sepatu/Sandal</option>
+          <option>Buku</option>
+          <option>Elektronik</option>
+          <option>Perabotan</option>
+        </select>
+
+        <select id="sortHarga">
+          <option value="terbaru">Terbaru</option>
+          <option value="termurah">Harga Terendah</option>
+          <option value="termahal">Harga Tertinggi</option>
+        </select>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <!-- FORM JUAL BARANG -->
+    <section class="form-section" id="jual">
+      <div class="section-heading">
+        <div class="eyebrow">BAGIKAN BARANGMU</div>
+        <h2>Jual Barang</h2>
+        <p>Masukkan barangmu ke katalog Preloved Mini!</p>
+        <p>
+          Data yang kamu kirim akan diperiksa admin terlebih dahulu sebelum
+          tampil di katalog.
+        </p>
+      </div>
+
+      <div class="login-note" id="loginNote" hidden>
+        🔒 Untuk menjual barang, kamu perlu <a href="#" id="loginNoteLink">masuk / daftar</a> terlebih dahulu.
+      </div>
+
+      <div class="form-layout">
+      <aside class="form-aside">
+        <h3>Jual dalam 3 langkah</h3>
+        <ol>
+          <li><b>Isi form</b> dengan foto & deskripsi jelas.</li>
+          <li><b>Admin memeriksa</b> barangmu terlebih dahulu.</li>
+          <li><b>Tampil di katalog</b> & pembeli chat via WhatsApp.</li>
+        </ol>
+      </aside>
+      <form class="form-container" id="formJual">
+        <div class="seller-tip full">
+          <p>
+            <strong>Saran:</strong> Gunakan foto dan deskripsi yang jelas agar
+            calon pembeli mudah memahami barang dan tertarik.
+          </p>
+        </div>
+
+        <div class="form-group full">
+          <label for="fotoBarang">Foto Barang</label>
+          <label class="dropzone" for="fotoBarang">
+            <input type="file" id="fotoBarang" accept="image/*" />
+            <span class="dz-icon">📷</span>
+            <span class="dz-text">
+              <b id="dzNama">Pilih foto barang</b>
+              <small>Klik atau seret foto ke sini · JPG, PNG, WEBP · maks. 3 MB</small>
+            </span>
+            <span class="dz-btn">Pilih File</span>
+          </label>
+          <img id="previewFoto" class="preview-foto" alt="Pratinjau foto" hidden />
+        </div>
+
+        <div class="form-group">
+          <label for="namaBarang">Nama Barang</label>
+          <input type="text" id="namaBarang" placeholder="Nama barang..." required />
+        </div>
+
+        <div class="form-group">
+          <label for="kategoriBarang">Kategori</label>
+          <select id="kategoriBarang" required>
+            <option value="">Pilih kategori</option>
+            <option>Fashion</option>
+            <option>Tas & Aksesoris</option>
+            <option>Sepatu/Sandal</option>
+            <option>Buku</option>
+            <option>Elektronik</option>
+            <option>Perabotan</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="hargaBarang">Harga (Rp)</label>
+          <input type="number" id="hargaBarang" min="0" placeholder="Contoh: 70000" required />
+        </div>
+
+        <div class="form-group">
+          <label for="kondisiBarang">Kondisi</label>
+          <select id="kondisiBarang" required>
+            <option value="">Pilih kondisi</option>
+            <option>Seperti Baru</option>
+            <option>Baik</option>
+            <option>Cukup Baik</option>
+          </select>
+        </div>
+
+        <div class="form-group full">
+          <label for="deskripsiBarang">Deskripsi Barang</label>
+          <textarea
+            id="deskripsiBarang"
+            placeholder="Jelaskan kondisi, ukuran, warna, kekurangan barang, dan lainnya..."
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="kontakPenjual">Nomor Telepon/WhatsApp</label>
+          <input
+            type="tel"
+            id="kontakPenjual"
+            placeholder="Contoh: 081234567890"
+            required
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" id="btnSubmit">
+          Submit Barang
+        </button>
+      </form>
+      </div>
+    </section>
+
+    <!-- TENTANG -->
+    <section id="tentang">
+      <div class="about-grid">
+        <div>
+          <div class="eyebrow">TENTANG PRELOVED MINI</div>
+          <h2>Memberi kesempatan kedua pada barang</h2>
+          <p>
+            Preloved Mini adalah website digital untuk menemukan dan menjual
+            barang bekas yang masih layak digunakan.
+          </p>
+          <p>
+            Pengguna dapat mencari barang, melihat detail, menyimpan favorit,
+            dan mempublikasikan barang miliknya.
+          </p>
+        </div>
+        <div class="about-box">
+          <h3>Kenapa Preloved?</h3>
+          <ul>
+            <li>Mengurangi barang yang terbuang</li>
+            <li>Memberikan kesempatan kedua pada barang</li>
+            <li>Harga lebih terjangkau</li>
+            <li>Mendorong penggunaan barang secara berkelanjutan</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <strong>Preloved Mini ♡</strong>
+        <p>Barang Lama, Cerita Baru.</p>
+      </div>
+      <p>© 2026 Preloved Mini</p>
+    </footer>
+
+    <!-- MODAL DETAIL BARANG -->
+    <div class="modal" id="detailModal">
+      <div class="modal-content">
+        <button class="modal-close" id="modalClose" aria-label="Tutup">✕</button>
+
+        <div class="modal-visual" id="modalVisual"></div>
+        <span class="tag" id="modalKategori"></span>
+        <h2 id="modalNama"></h2>
+        <p class="product-price" id="modalHarga"></p>
+        <p id="modalKondisi"></p>
+        <p id="modalDeskripsi"></p>
+        <p id="modalSuka" class="modal-suka"></p>
+
+        <a class="btn btn-primary btn-block" id="modalBeli" target="_blank" rel="noopener">
+          Beli
+        </a>
+      </div>
+    </div>
+
+    <!-- MODAL LOGIN / DAFTAR -->
+    <div class="modal" id="authModal">
+      <div class="modal-content auth-content">
+        <button class="modal-close" id="authClose" aria-label="Tutup">✕</button>
+        <h2 id="authTitle">Masuk</h2>
+        <p id="authSub">Masuk untuk menjual barang dan menyukai barang.</p>
+        <form id="authForm">
+          <div class="form-group" id="grpNama" hidden>
+            <label for="authNama">Nama</label>
+            <input type="text" id="authNama" placeholder="Nama kamu" />
+          </div>
+          <div class="form-group">
+            <label for="authEmail">Email</label>
+            <input type="email" id="authEmail" placeholder="nama@email.com" required />
+            <div class="form-group">
+              <label for="authPass">Password</label>
+              <div class="pass-wrap">
+                <input type="password" id="authPass" placeholder="Minimal 6 karakter" required />
+                <button type="button" class="toggle-pass" id="togglePass" aria-label="Tampilkan password" aria-pressed="false">
+                  👁
+                </button>
+              </div>
+            </div>
+          <p class="auth-error" id="authError"></p>
+          <button type="submit" class="btn btn-primary btn-block" id="authSubmit">Masuk</button>
+        </form>
+        <p class="auth-switch"><span id="authSwitchText">Belum punya akun?</span> <a href="#" id="authSwitch">Daftar</a></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

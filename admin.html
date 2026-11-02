@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin — Preloved Mini</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body class="admin-body">
+    <header>
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Logo" class="logo-img" />
+        <span>Admin Panel</span>
+      </a>
+      <nav style="display:flex">
+        <a href="index.html">← Ke Website</a>
+        <a href="#" id="logoutBtn">Keluar</a>
+      </nav>
+    </header>
+
+    <main class="admin-main" id="adminMain" hidden>
+      <h1>Kelola Preloved Mini</h1>
+
+      <div class="admin-tabs" id="tabs">
+        <button data-tab="pending" class="aktif">Menunggu Persetujuan <b id="badgePending">0</b></button>
+        <button data-tab="semua">Semua Produk</button>
+        <button data-tab="users">Pengguna</button>
+      </div>
+
+      <div class="table-wrap"><table id="tabel"></table></div>
+    </main>
+
+    <p class="admin-denied" id="adminDenied" hidden>
+      Halaman ini khusus admin. <a href="index.html">Kembali ke website</a> dan masuk dengan akun admin.
+    </p>
+
+    <!-- Modal edit produk -->
+    <div class="modal" id="editModal">
+      <div class="modal-content auth-content">
+        <button class="modal-close" id="editClose">✕</button>
+        <h2>Edit Barang</h2>
+        <form id="editForm">
+          <div class="form-group"><label>Nama</label><input id="eNama" required /></div>
+          <div class="form-group"><label>Kategori</label>
+            <select id="eKategori"><option>Fashion</option><option>Tas & Aksesoris</option><option>Sepatu/Sandal</option><option>Buku</option><option>Elektronik</option><option>Perabotan</option></select></div>
+          <div class="form-group"><label>Harga (Rp)</label><input type="number" id="eHarga" min="0" required /></div>
+          <div class="form-group"><label>Kondisi</label>
+            <select id="eKondisi"><option>Seperti Baru</option><option>Baik</option><option>Cukup Baik</option></select></div>
+          <div class="form-group"><label>Deskripsi</label><textarea id="eDeskripsi" required></textarea></div>
+          <div class="form-group"><label>Kontak WA</label><input id="eKontak" required /></div>
+          <button class="btn btn-primary btn-block">Simpan</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
